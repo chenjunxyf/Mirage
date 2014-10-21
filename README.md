@@ -1,5 +1,7 @@
 ##Mirage
 
+![logo](logo.ico)
+
 ###这是一个用于项目管理的开源项目
     
 ###主要功能：
@@ -11,6 +13,7 @@
 + __后台：nodejs__
 + __前端：html、js、css__
 + __框架：express、bootstrap3、jquery__
+
 
 
 
