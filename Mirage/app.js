@@ -32,7 +32,7 @@ app.use(session({
     secret: 'chenjuncss',
     resave: false,
     saveUninitialized: false,
-    cookie: { maxAge: 60*1000 }
+    cookie: { maxAge: 5*60*1000 }
 }));
 
 //middleware to catch all the request
@@ -45,6 +45,7 @@ app.use('/', routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
+    console.log(req.originalUrl);
     var err = new Error('Not Found');
     err.status = 404;
     next(err);
