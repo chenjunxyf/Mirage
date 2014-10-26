@@ -12,7 +12,7 @@
 ###主要技术
 + __后台：nodejs+handlebars摸板__
 + __前端：html、js、css__
-+ __框架：express、bootstrap3、jquery-1.11.1__
++ __框架：express、bootstrap3.2、jquery-1.11.1__
 
 
 
