@@ -1,0 +1,33 @@
+body {
+  background: url(/images/background.jpg);
+  font: 15px "Microsoft YaHei", Helvetica, Arial, sans-serif;
+}
+
+.userInfo {
+  margin-top: 150px;
+  padding: 0 40px;
+  height: 320px;
+  color: #fff;
+  background-color: rgba(51, 27, 43, 0.9);
+  /*ie*/
+  filter: alpha(opacity=80);
+  background-color: rgb(51, 27, 43);
+}
+.userInfo h3 {
+  text-align: center;
+}
+.userInfo .username,
+.userInfo .password,
+.userInfo button {
+  margin: 18px 0;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 0;
+}
+.loginCheck {
+  height: 26px;
+  line-height: 26px;
+}
+.remAutoLoginTxt {
+  font-weight: normal;
+}

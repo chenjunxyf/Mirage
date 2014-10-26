@@ -1,0 +1,10 @@
+{
+  "mysql": {
+          "host": "10.103.240.135",
+          "port": 3306,
+          "user": "root",
+          "password": "zyrf123",
+          "database": "mirage",
+          "connectionLimit": 10
+    }
+}
