@@ -1,5 +1,6 @@
 var express = require('express');
-var user = require('../models/user.js');
+var crypto = require('crypto');
+var User = require('../models/user.js');
 var router = express.Router();
 
 
@@ -15,14 +16,49 @@ router.get('/index', function(req, res) {
 router.get('/login', checkLogin);
 router.post('/login', function(req, res) {
   var body = req.body;
-  user.get(body.username, function(user) {
+  var md5 = crypto.createHash('md5');
+  var password = md5.update(body.password).digest('base64');
+  User.get(body.username, function(user) {
+      if(user.length > 0 && user[0].username == body.username && user[0].password == password) {
+        req.session.user = {
+          username: body.username
+        };
+        res.render('index', {title: '首页'});
+      } else {
+        res.render('login', {title: '用户登入'});
+      }
+  });
+});
+
+/*注册处理*/
+router.get('/register', function(req, res) {
+  res.render('register',{title: '注册'});
+});
+router.post('/register', function(req, res) {
+  var body = req.body;
+  if(body.password !== body.confirmPass) {
+    console.log('前后密码不一致');
+    return res.redirect('/register');
+  }
+
+  var md5 = crypto.createHash('md5');
+  var pass = md5.update(body.password).digest('base64');
+
+  var newUser = new User({
+    username: body.username,
+    password: pass
+  });
+
+  User.get(newUser.username, function(user) {
     if(user.length > 0) {
-      console.log(user[0]);
-      req.session.user = user[0];
-      res.render('index', {title: '首页'});
-    } else {
-      res.render('login', {title: '用户登入'});
+      console.log('存在该用户');
+      return res.render('register', {title: '注册'});
     }
+    newUser.save(function(result){
+      console.log(result);
+      if(result != -1)
+        res.render('index', {title: '首页'});
+    });
   });
 });
 
@@ -31,7 +67,8 @@ function checkLogin(req, res) {
   if(req.session.user) {
     res.render('index', {title: '首页'});
   } else {
-    res.render('login');
+    res.render('login', {title: '登入'});
   }
 }
+
 module.exports = router;

@@ -6,7 +6,7 @@ body {
 .userInfo {
   margin-top: 160px;
   padding: 0 40px;
-  height: 320px;
+  height: 380px;
   color: #fff;
   background-color: rgba(51, 27, 43, 0.9);
   /*ie*/
@@ -17,7 +17,7 @@ body {
   text-align: center;
 }
 .userInfo .inputInfo,
-.userInfo .btnLogin {
+.userInfo .btnReg {
     margin: 18px 0;
 }
 .userInfo .input-group-addon {
@@ -25,15 +25,11 @@ body {
 }
 .userInfo .username,
 .userInfo .password,
-.userInfo .btnLogin {
+.userInfo .btnReg {
   height: 40px;
   font-size: 16px;
   border-radius: 0;
 }
-.loginCheck {
-  height: 26px;
-  line-height: 26px;
-}
-.remAutoLoginTxt {
-  font-weight: normal;
+.userInfo .agreeRule {
+    margin: 0 0;
 }
