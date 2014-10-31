@@ -23,9 +23,12 @@ router.post('/login', function(req, res) {
         req.session.user = {
           username: body.username
         };
+        if(body.remAutoLogin != undefined) {
+          res.cookie('user', { username: body.username, password: password }, { signed: true, maxAge: 5*60*1000, httpOnly: true });
+        }
         res.render('index', {title: '首页'});
       } else {
-        res.render('login', {title: '用户登入'});
+        res.render('login', {title: '用户登录'});
       }
   });
 });

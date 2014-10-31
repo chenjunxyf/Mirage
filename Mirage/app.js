@@ -5,9 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
-
+var setting = require('./conf/setting.json');
 var routes = require('./routes/index');
-
+var auth = require('./middleware/auth.js');
 var app = express();
 
 // set hbs partials
@@ -24,12 +24,12 @@ app.set('view engine', 'hbs');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(cookieParser(setting.cookie_secret));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // session setup
 app.use(session({
-    secret: 'chenjuncss',
+    secret: setting.session_secret,
     resave: false,
     saveUninitialized: false,
     cookie: { maxAge: 5*60*1000 }
@@ -40,6 +40,8 @@ app.use(function (req, res, next) {
   console.log('**********Time: %d**********', Date.now());
   next();
 });
+
+app.use(auth.authUser);
 
 app.use('/', routes);
 

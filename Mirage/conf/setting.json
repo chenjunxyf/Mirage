@@ -6,5 +6,7 @@
           "password": "zyrf123",
           "database": "mirage",
           "connectionLimit": 10
-    }
+    },
+    "session_secret": "chenjuncss",
+    "cookie_secret": "chenjunxyf"
 }
