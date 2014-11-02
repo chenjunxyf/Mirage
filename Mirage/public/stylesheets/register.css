@@ -5,8 +5,10 @@ body {
 
 .userInfo {
   margin-top: 160px;
-  padding: 0 40px;
+  padding: 20px 40px;
+  height:auto!important;
   height: 380px;
+  min-height: 380px;
   color: #fff;
   background-color: rgba(51, 27, 43, 0.9);
   /*ie*/
@@ -14,7 +16,12 @@ body {
   background-color: rgb(51, 27, 43);
 }
 .userInfo h3 {
+  margin: 0;
   text-align: center;
+}
+.userInfo h5 {
+  margin: 10px 0;
+  color: red;
 }
 .userInfo .inputInfo,
 .userInfo .btnReg {
@@ -31,5 +38,6 @@ body {
   border-radius: 0;
 }
 .userInfo .agreeRule {
-    margin: 0 0;
+    margin: 0;
+    font-weight: normal;
 }

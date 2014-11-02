@@ -7,6 +7,7 @@ exports.authUser = function(req, res, next) {
     } else {
       var cookie = req.signedCookies.user;
       if(!cookie) {
+          console.log('no cookie');
           if(!needLogin(path))
             return next();
           return res.render('login', {title: '用户登录'});
