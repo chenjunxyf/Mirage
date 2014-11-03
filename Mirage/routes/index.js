@@ -3,11 +3,6 @@ var crypto = require('crypto');
 var User = require('../models/user.js');
 var router = express.Router();
 
-/*主页*/
-router.get('/index', function(req, res) {
-  res.render('index', { title: '首页' });
-});
-
 
 /*登入处理*/
 router.get('/', checkLogin);

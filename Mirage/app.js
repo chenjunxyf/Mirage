@@ -32,7 +32,7 @@ app.use(session({
     secret: setting.session_secret,
     resave: false,
     saveUninitialized: false,
-    cookie: { maxAge: 5*60*1000 }
+    cookie: { maxAge: 60*60*1000 }
 }));
 
 //middleware to catch all the request

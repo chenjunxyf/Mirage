@@ -30,7 +30,8 @@ exports.authUser = function(req, res, next) {
 
 /*tool function*/
 var needLogin = function(path) {
-    var noLoginPath = ['/', '/login', '/register', '/index']; //不需要登陆的地址
+    //不需要登陆的地址
+    var noLoginPath = ['/', '/login', '/register'];
 
     for(var i =0; i< noLoginPath.length;i++)
     {

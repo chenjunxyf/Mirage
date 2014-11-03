@@ -1,43 +1,15 @@
 <link rel="stylesheet" href="/stylesheets/index.css" />
 
-<nav class="navbar navbar-static-top" role="navigation">
-  <div class="container">
-    <!--for better mobile display-->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mirage-navbar">
-        <span class="sr-only"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">
-        <img src="/images/brand.png" alt="brand" title="Mirage团队" />
-        <span class="team-name">Mirage</span>
-      </a>
-    </div>
-    <!--nav links-->
-    <div class="collapse navbar-collapse" id="mirage-navbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">首页</a></li>
-        <li><a href="#">周报管理</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">编码规范<span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">html</a></li>
-            <li class="divider"></li>
-            <li><a href="#">css</a></li>
-            <li class="divider"></li>
-            <li><a href="#">javascript</a></li>
-            <li class="divider"></li>
-            <li><a href="#">java</a></li>
-          </ul>
-        </li>
-        <li><a href="#">团队介绍</a></li>
-      </ul>
+<!--navbar-->
+{{> navbar}}
 
-      <ul  class="nav navbar-nav navbar-right">
-        <li><a href="#">chenjun</a></li>
-      </ul>
-    </div>
+<!--header-->
+<header id="mirage-header">
+  <div class="logo">
+    <a href=""><img src="/images/mirage.png" alt="logo"></a>
   </div>
-</nav>
+</header>
+
+<!--content-->
+
+<!--footer-->
