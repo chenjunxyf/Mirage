@@ -3,11 +3,14 @@ var crypto = require('crypto');
 var User = require('../models/user.js');
 var router = express.Router();
 
+/*主页*/
+router.get('/index', function(req, res) {
+  res.render('index', { title: '首页' });
+});
 
-/* GET home page. */
-router.get('/', checkLogin);
 
 /*登入处理*/
+router.get('/', checkLogin);
 router.get('/login', checkLogin);
 router.post('/login', function(req, res) {
   var body = req.body;

@@ -1,0 +1,45 @@
+body {
+    font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
+}
+
+.navbar {
+  height: 60px;
+  font-size: 16px;
+  background: url(/images/bg_nav.png) repeat-x;
+  border: 0;
+}
+
+.navbar-brand {
+  height: 60px;
+  line-height: 48px;
+  padding: 6px 20px;
+}
+.navbar-brand .team-name {
+  color: #eee;
+  font-size: 20px;
+}
+
+.nav > li > a {
+  color: #eee;
+  line-height: 30px;
+}
+.nav .active {
+  color: #fff;
+  background: url(/images/navSelectedBg.png) repeat-x;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+  color: #fff;
+  background: url(/images/navSelectedBg.png) repeat-x 0 -65px;
+}
+
+.dropdown-menu {
+  font-size: 16px;
+  border-radius: 0;
+}
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+  color: #fff;
+  background: url(/images/navSelectedBg.png) repeat-x;
+}

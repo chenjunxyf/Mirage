@@ -9,7 +9,7 @@ body {
   height: 320px;
   min-height: 320px;
   color: #fff;
-  background-color: rgba(51, 27, 43, 0.9);
+  background-color: rgba(51, 27, 43, 0.8);
   /*ie*/
   filter: alpha(opacity=80);
   background-color: rgb(51, 27, 43);
