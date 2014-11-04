@@ -6,15 +6,24 @@ body {
   position: relative;
   min-height: 400px;
   text-align: center;
-  background: url(/images/header.jpg);
+  background-color: #2a3239;
+  background: url(/images/header.png) repeat-x;
   background-size: cover;
 }
 .logo {
   position: absolute;
   left: 1%;
   right: 1%;
-  bottom: 10px;
+  bottom: 60px;
 }
 .logo img {
     border-radius: 50%;
+}
+
+.content {
+  background-color: #f2f2f2;
+  padding-top: 24px;
+  -webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.1);
 }
